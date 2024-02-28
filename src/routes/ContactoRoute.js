@@ -6,4 +6,4 @@ const contactoRouter = express.Router();
 contactoRouter.route('/contacto')
 .post(contactoController.guardarContacto)
 
-module.exports = productRouter
+module.exports = contactoRouter

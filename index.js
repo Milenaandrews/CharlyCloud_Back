@@ -1,12 +1,12 @@
 const express = require("express")
 const contactoRouter = require('./src/routes/ContactoRoute')
-
+const cors = require("cors")
 
 const app = express()
 
 require("dotenv").config()
 
-require('./config/dataBase')
+require('./src/config/data/dataBase')
 
 const PORT = process.env.PORT
 
@@ -14,6 +14,8 @@ const PORT = process.env.PORT
 app.use(express.json())
 
 app.use(contactoRouter)
+
+app.use(cors())
 
 app.listen(PORT , ()=>console.log(`conectado a puerto: ${PORT}`))
 

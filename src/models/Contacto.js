@@ -1,6 +1,6 @@
 const mongoose = require('mongoose')
 
-const formSchema = new mongoose.Schema(
+const contactoSchema = new mongoose.Schema(
     {
         nombre: {
             type: String,
@@ -19,6 +19,6 @@ const formSchema = new mongoose.Schema(
 
     }, {timestamps:true});
 
-    const Contacto = mongoose.model("contacto", productSchema)
+    const Contacto = mongoose.model("contacto", contactoSchema)
 
     module.exports = Contacto;

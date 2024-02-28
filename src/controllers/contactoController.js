@@ -1,7 +1,9 @@
+const Contacto = require("../models/Contacto")
+
 
 const guardarContacto = async(req, res)=>{
     try {
-        const nuevoContacto = new Info(req.body)
+        const nuevoContacto = new Contacto(req.body)
         await nuevoContacto.save()
         res.json ({success: true, msg:"Contacto Guardado", info: nuevoContacto})
     } catch (error) {
