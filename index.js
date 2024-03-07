@@ -1,6 +1,6 @@
 const express = require("express")
 const contactoRouter = require('./src/routes/ContactoRoute')
-const cors = require("cors")
+const cors = require('cors');
 
 const app = express()
 

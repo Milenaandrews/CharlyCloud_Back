@@ -11,10 +11,24 @@ const contactoSchema = new mongoose.Schema(
             trim: true
         },
 
+        farmacia:{
+            
+            type: String,
+            required: true,
+            lowercase: true,
+            minLength: 3,
+            maxLength: 100,
+            trim: true
+        },
+            
         email: {
             type: String,
             required: true,
         },
+
+
+
+
 
 
     }, {timestamps:true});
