@@ -1,6 +1,6 @@
 const nodemailer = require("nodemailer");
 
-export const transporter = nodemailer.createTransport({
+const transporter = nodemailer.createTransport({
     host: "smtp.gmail.com",
     port: 465,
     secure: true, // Use `true` for port 465, `false` for all other ports
@@ -13,3 +13,5 @@ export const transporter = nodemailer.createTransport({
 transporter.verify().then( ()=>{
     console.log('listo para enviar correo')
 })
+
+module.exports = {transporter}
